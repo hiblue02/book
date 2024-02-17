@@ -1,5 +1,4 @@
-# book_real_mysql
-Real MySQL 8.0 북스터디
+# Real MySql 8.0
 
 #### 1. [소개](/realMySql/1권/01_02_소개_설치와_설정.md)
 #### 2. [설치와 설정](/realMySql/1권/01_02_소개_설치와_설정.md)
