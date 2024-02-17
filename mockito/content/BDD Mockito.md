@@ -33,4 +33,8 @@ import static org.mockito.BDDMockito.*;
  then(person).shouldHaveNoMoreInteractions();
  then(police).shouldHaveZeroInteractions();
 ~~~
-참고 : https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/BDDMockito.html
+(*) then 다음의 검증 메소드는 [여기](https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/BDDMockito.Then.html#should()) 참고
+참고 
+- https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/BDDMockito.html
+- https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/BDDMockito.Then.html#should()
+- https://www.baeldung.com/bdd-mockito
