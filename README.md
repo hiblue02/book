@@ -7,9 +7,9 @@
 #### 6. [데이터 압축](/realMySql/1권/06_데이터_압축.md)
 #### 7. [데이터 암호화](/realMySql/1권/07_데이터_암호화.md)
 # Mockito
-#### [1. Mock이란?](/mockito/content/Mock.md)
-#### [2. Spring Component와 Mock](/mockito/content/Spring_Component와_Mock.md)
-#### [3. Mock에 값/예외 셋팅하고 검증하기](/mockito/content/Stubbing와_Verify)
-#### [4. BDD 스타일로 mocking 하기](/mockito/content/BDD_Mockito)
+#### [1. Mock이란?](/mockito/content/1-mock.md)
+#### [2. Spring Component와 Mock](/mockito/content/2-spring-component-and-mock.md)
+#### [3. Mock에 값/예외 셋팅하고 검증하기](/mockito/content/3-stubbing-and-verify.md)
+#### [4. BDD 스타일로 mocking 하기](/mockito/content/4-bdd-mockito.md)
 #### [4. Api Mocking하기](https://www.baeldung.com/spring-mock-rest-template)
 #### [5. private 메소드 mocking 하기](https://www.baeldung.com/powermock-private-method)
