@@ -1,15 +1,4 @@
-# Real MySql 8.0
-#### 1. [소개](/realMySql/1권/01_02_소개_설치와_설정.md)
-#### 2. [설치와 설정](/realMySql/1권/01_02_소개_설치와_설정.md)
-#### 3. [사용자 및 권한](/realMySql/1권/03_사용자및권한.md)
-#### 4. [아키텍처](/realMySql/1권/04_아키텍처.md)
-#### 5. [트랜잭션과 잠금](/realMySql/1권/05_트랜잭션과_잠금.md)
-#### 6. [데이터 압축](/realMySql/1권/06_데이터_압축.md)
-#### 7. [데이터 암호화](/realMySql/1권/07_데이터_암호화.md)
-# Mockito
-#### 1. [Mock이란?](/mockito/content/Mock.md)
-#### 2. [Spring Component와 Mock](/mockito/content/Spring_Component와_Mock.md)
-#### 3. [Mock에 값/예외 셋팅하고 검증하기](/mockito/content/Stubbing와_Verify)
-#### 4. [BDD 스타일로 mocking 하기](/mockito/content/BDD_Mockito)
-#### 5. [Api Mocking하기](https://www.baeldung.com/spring-mock-rest-template)
-#### 6. [private 메소드 mocking 하기](https://www.baeldung.com/powermock-private-method)
+# 데이터베이스
+# [Real MySql 8.0](/realMySql/readme.md)
+# 테스트
+## [Mockito](/mockito/readme.md)
