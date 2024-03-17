@@ -68,8 +68,8 @@
   void testWithArgumentsSource(String argument) {
       assertNotNull(argument);
   }
-  ~~~  
-### @CsvSource
+  ~~~
+ ### @CsvSource
 - 기술된 csv 형태의 값을 분리해넣어 테스트를 실행한다. (파라미터가 N개인 테스트 메소드를 실행할 수 있다.)
 - row(데이터쌍)는 " "로 묶고, common(,)로 분리한다.
 - ~~~java
@@ -116,7 +116,75 @@
       assertNotEquals(0, reference);
   }
   ~~~    
+## 파라미터 변환하기
+### 기본 변환 
+- https://junit.org/junit5/docs/current/user-guide/#writing-tests-parameterized-tests-argument-conversion-implicit
+### String 1개인 팩토리 메소드(생성자)
+- 파라미터가 String 1개인 non-private static 팩토리 메소드나, 생성자가 있으면 알아서 junit이 자동으로 사용자 정의 type으로 변환해준다.
+- ~~~java
+  @ParameterizedTest
+  @ValueSource(strings = "42 Cats")
+  void testWithImplicitFallbackArgumentConversion(Book book) {
+      assertEquals("42 Cats", book.getTitle());
+  }
+  ~~~
+  ~~~java
+  public class Book {
+  
+      private final String title;
+  
+      private Book(String title) {
+          this.title = title;
+      }
+  
+      public static Book fromTitle(String title) {
+          return new Book(title);
+      }
+  }
+  ~~~
+### 내멋데로 타입 변환하기 (@ConvertWith)
+- ArgumentConverter를 상속받은 클래스를 만들고 convert를 오버라이딩한다. (내가 쓰고 싶은 변환 로직을 짠다.)
+- 테스트 메서드 파라미터 선언 앞에 @ConverWith로 사용할 converter를 지정한다.
+  - ~~~java
+    @ParameterizedTest
+    @EnumSource(ChronoUnit.class)
+    void testWithExplicitArgumentConversion(
+            @ConvertWith(ToStringArgumentConverter.class) String argument) {
+    
+        assertNotNull(ChronoUnit.valueOf(argument));
+    }
+    ~~~ 
+- SimpleArgumentConverter: 파라미터 1개를 여러 타입으로 반환하고 싶을때 사용한다. (String은 Enum이나 String으로 바꾸고 싶을 때)
+  - ~~~java
+    public class ToStringArgumentConverter extends SimpleArgumentConverter {
+        @Override
+        protected Object convert(Object source, Class<?> targetType) {
+            assertEquals(String.class, targetType, "Can only convert to String");
+            if (source instanceof Enum<?>) {
+                return ((Enum<?>) source).name();
+            }
+            return String.valueOf(source);
+        }
+    }
+    ~~~
+- TypedArgumentConverter<Type, Type>: 파라미터 1개를 1개의 타입으로만 변환하고 싶을 때 사용한다. (타입 체크 로직을 안 쓸 수 있다.)
+  - ~~~java
+    public class ToLengthArgumentConverter extends TypedArgumentConverter<String, Integer> {
 
+        protected ToLengthArgumentConverter() {
+            super(String.class, Integer.class);
+        }
+    
+        @Override
+        protected Integer convert(String source) {
+            return (source != null ? source.length() : 0);
+        }
+    
+    }
+    ~~~ 
+
+
+## 파라미터 묶어서 받기 
 ## 메소드 이름 표시하기
 ~~~java
 @ParameterizedTest(name = "For example, year {0} is not supported.")
