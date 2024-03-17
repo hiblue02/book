@@ -18,7 +18,7 @@
     - `TestTemplateInvocationContextProvider`와 함께 사용한다.
     - 어떤 테스트에 특정 기능(`TestTemplateInvocationContextProvider`)을 붙여주고 싶을 때 사용한다.
     - ` @ParameterizedTest`와 `@RepeatedTest`도 TestTemplate이다. 
-      ~~~java
+    - ~~~java
       @TestTemplate
       @ExtendWith(MyTestTemplateInvocationContextProvider.class)
         void testTemplate(String fruit) {
