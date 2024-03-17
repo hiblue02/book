@@ -1,4 +1,4 @@
-## ParameterizedTest
+## @ParameterizedTest
 - 서술된 파라미터들을 1개씩 넣어 테스트를 실행시켜주는 기능이다.
   
 ## 파라미터 셋팅하기
