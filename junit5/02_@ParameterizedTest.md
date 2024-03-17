@@ -143,8 +143,8 @@
   }
   ~~~
 ### 내멋데로 타입 변환하기 (@ConvertWith)
-- ArgumentConverter를 상속받은 클래스를 만들고 convert를 오버라이딩한다. (내가 쓰고 싶은 변환 로직을 짠다.)
-- 테스트 메서드 파라미터 선언 앞에 @ConverWith로 사용할 converter를 지정한다.
+- `ArgumentConverter`를 상속받은 클래스를 만들고 convert를 오버라이딩한다. (내가 쓰고 싶은 변환 로직을 짠다.)
+- 테스트 메서드 파라미터 선언 앞에 `@ConverWith`로 사용할 converter를 지정한다.
   - ~~~java
     @ParameterizedTest
     @EnumSource(ChronoUnit.class)
@@ -154,7 +154,7 @@
         assertNotNull(ChronoUnit.valueOf(argument));
     }
     ~~~ 
-- SimpleArgumentConverter: 파라미터 1개를 여러 타입으로 반환하고 싶을때 사용한다. (String은 Enum이나 String으로 바꾸고 싶을 때)
+- `SimpleArgumentConverter`: 파라미터 1개를 여러 타입으로 반환하고 싶을때 사용한다. (String은 Enum이나 String으로 바꾸고 싶을 때)
   - ~~~java
     public class ToStringArgumentConverter extends SimpleArgumentConverter {
         @Override
@@ -167,7 +167,7 @@
         }
     }
     ~~~
-- TypedArgumentConverter<Type, Type>: 파라미터 1개를 1개의 타입으로만 변환하고 싶을 때 사용한다. (타입 체크 로직을 안 쓸 수 있다.)
+- `TypedArgumentConverter<Type, Type>`: 파라미터 1개를 1개의 타입으로만 변환하고 싶을 때 사용한다. (타입 체크 로직을 안 쓸 수 있다.)
   - ~~~java
     public class ToLengthArgumentConverter extends TypedArgumentConverter<String, Integer> {
 
@@ -182,9 +182,48 @@
     
     }
     ~~~ 
-
-
 ## 파라미터 묶어서 받기 
+### ArgumentAccessor
+- 파라미터를 묶어서 받을 수 있다.
+- ~~~java
+  @ParameterizedTest
+  @CsvSource({
+      "Jane, Doe, F, 1990-05-20",
+      "John, Doe, M, 1990-10-22"
+  })
+  void testWithArgumentsAccessor(ArgumentsAccessor arguments) {
+      Person person = new Person(arguments.getString(0),
+                                 arguments.getString(1),
+                                 arguments.get(2, Gender.class),
+                                 arguments.get(3, LocalDate.class));
+  ...
+  }
+  ~~~
+### 내멋데로 묶기
+- `ArgumentsAggregator`를 상속받은 클래스를 만들고 `aggregateArguments` 메소드를 오버라이딩한다. (aggregation 로직을 구현한다.)
+- 테스트 메서드 파라미터 선언 앞에 `@AggregateWith`로 사용한 조합 클래스를 지정한다.
+- ~~~java
+  @ParameterizedTest
+  @CsvSource({
+      "Jane, Doe, F, 1990-05-20",
+      "John, Doe, M, 1990-10-22"
+  })
+  void testWithArgumentsAggregator(@AggregateWith(PersonAggregator.class) Person person) {
+      // perform assertions against person
+  }
+  ~~~
+- ~~~java
+  public class PersonAggregator implements ArgumentsAggregator {
+      @Override
+      public Person aggregateArguments(ArgumentsAccessor arguments, ParameterContext context) {
+          return new Person(arguments.getString(0),
+                            arguments.getString(1),
+                            arguments.get(2, Gender.class),
+                            arguments.get(3, LocalDate.class));
+      }
+  }
+  ~~~
+
 ## 메소드 이름 표시하기
 ~~~java
 @ParameterizedTest(name = "For example, year {0} is not supported.")
