@@ -51,6 +51,24 @@
       return Stream.of("apple", "banana");
   }
   ~~~
+### @ArgumentsSource
+- 기술된 클래스의 provideArguements 메소드를 실행해 파라미터 데이터를 생성한다. (`ArgumentsProvider`를 상속받은 클래스여야 한다.)
+- ~~~java
+  public class MyArgumentsProvider implements ArgumentsProvider {
+  
+      @Override
+      public Stream<? extends Arguments> provideArguments(ExtensionContext context) {
+          return Stream.of("apple", "banana").map(Arguments::of);
+      }
+  }
+  ~~~
+- ~~~java
+  @ParameterizedTest
+  @ArgumentsSource(MyArgumentsProvider.class)
+  void testWithArgumentsSource(String argument) {
+      assertNotNull(argument);
+  }
+  ~~~  
 ### @CsvSource
 - 기술된 csv 형태의 값을 분리해넣어 테스트를 실행한다. (파라미터가 N개인 테스트 메소드를 실행할 수 있다.)
 - row(데이터쌍)는 " "로 묶고, common(,)로 분리한다.
