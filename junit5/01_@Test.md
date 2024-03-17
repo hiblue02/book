@@ -11,9 +11,21 @@
     }
     ~~~
 2. @RepeatedTest
+    - 테스트를 N번 반복한다. `@Execution(SAME_THREAD)`와 함께쓰면 병렬 실행된다.
 3. @ParameterizedTest
 4. @TestFactory
 5. @TestTemplate
+    - `TestTemplateInvocationContextProvider`와 함께 사용한다.
+    - 어떤 테스트에 특정 기능(`TestTemplateInvocationContextProvider`)을 붙여주고 싶을 때 사용한다.
+    - ` @ParameterizedTest`와 `@RepeatedTest`도 TestTemplate이다. 
+      ~~~java
+      @TestTemplate
+      @ExtendWith(MyTestTemplateInvocationContextProvider.class)
+        void testTemplate(String fruit) {
+        assertTrue(fruits.contains(fruit));
+      }
+      ~~~
+    
 6. @Disabled
    - 사용하지 않는 테스트 메소드일 때 사용한다. 
   ~~~java
