@@ -51,6 +51,38 @@
       return Stream.of("apple", "banana");
   }
   ~~~
+### @CsvSource
+- 기술된 csv 형태의 값을 분리해넣어 테스트를 실행한다. (파라미터가 N개인 테스트 메소드를 실행할 수 있다.)
+- NULL은 `NIL`로 표시한다.
+- 속성
+  - `useHeadersInDisplayName`: true면 csv의 header를 displayName의 파라미터로 사용할 수 있다. 
+    - ~~~java
+        @ParameterizedTest(name = "[{index}] {arguments}")
+        @CsvSource(useHeadersInDisplayName = true, textBlock = """
+            FRUIT,         RANK
+            apple,         1
+            banana,        2
+            'lemon, lime', 0xF1
+            strawberry,    700_000
+            """)
+        void testWithCsvSource(String fruit, int rank) {
+            // ...
+        }
+      ~~~
+- ~~~java
+  @ParameterizedTest
+  @CsvSource({
+      "apple,         1",
+      "banana,        2",
+      "'lemon, lime', 0xF1",
+      "strawberry,    700_000"
+  })
+  void testWithCsvSource(String fruit, int rank) {
+      assertNotNull(fruit);
+      assertNotEquals(0, rank);
+  }
+  ~~~
+
 ## 메소드 이름 표시하기
 ~~~java
 @ParameterizedTest(name = "For example, year {0} is not supported.")
