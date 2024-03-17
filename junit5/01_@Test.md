@@ -49,12 +49,12 @@
 ### @Disabled
 - 사용하지 않는 테스트 메소드일 때 사용한다. 
 - ~~~java
- @Test
- @Disabled("for demonstration purposes")
- void skippedTest() {
-       // not executed
- }
- ~~~
+   @Test
+   @Disabled("for demonstration purposes")
+   void skippedTest() {
+         // not executed
+   }
+   ~~~
 ## Life Cycle 메소드
 ### @TestInstance
 테스트가 다른 작업에 영향을 받게 하고 싶지 않을때 사용하는 **클래스** 레벨 에노테이션이다. 속성(LifeCycle.class)으로 테스트 분리 단위를 지정할 수 있다. 
