@@ -53,22 +53,7 @@
   ~~~
 ### @CsvSource
 - 기술된 csv 형태의 값을 분리해넣어 테스트를 실행한다. (파라미터가 N개인 테스트 메소드를 실행할 수 있다.)
-- NULL은 `NIL`로 표시한다.
-- 속성
-  - `useHeadersInDisplayName`: true면 csv의 header를 displayName의 파라미터로 사용할 수 있다. 
-    - ~~~java
-        @ParameterizedTest(name = "[{index}] {arguments}")
-        @CsvSource(useHeadersInDisplayName = true, textBlock = """
-            FRUIT,         RANK
-            apple,         1
-            banana,        2
-            'lemon, lime', 0xF1
-            strawberry,    700_000
-            """)
-        void testWithCsvSource(String fruit, int rank) {
-            // ...
-        }
-      ~~~
+- row(데이터쌍)는 " "로 묶고, common(,)로 분리한다.
 - ~~~java
   @ParameterizedTest
   @CsvSource({
@@ -82,6 +67,37 @@
       assertNotEquals(0, rank);
   }
   ~~~
+  - 속성
+  - `useHeadersInDisplayName`: CsvSource에 헤더가 있으면 true로 설정한다. (csv의 header를 displayName의 파라미터로 사용할 수 있다. )
+  - `textBlock`: textBlock에 csv 데이터를 넣으면 ""이 없이 enter(줄바꿈)을 인신해 데이터 row를 분리한다.
+    - ~~~java
+        @ParameterizedTest(name = "[{index}] {arguments}")
+        @CsvSource(useHeadersInDisplayName = true, textBlock = """
+            FRUIT,         RANK
+            apple,         1
+            banana,        2
+            'lemon, lime', 0xF1
+            strawberry,    700_000
+            """)
+        void testWithCsvSource(String fruit, int rank) {
+            // ...
+        }
+      ~~~
+    - `delimiter`: CsvSource에 기술된 데이터를 나누는 문자, default는 common(,)다.
+    - `nullValues`: CsvSource에 nullValues로 정의된 문자열은 null로 판단한다.
+    - `ignoreLeadingAndTrailingWhitespace`: true로 설정하면 trim(앞뒤 공백 제거)된다.
+ ### @CsvFileSource 
+ - @CsvSource와 같으나, `resources` 속성에 기술된 Csv파일을 불러온다.
+ - 속성:
+   - `numLinesToSkip`: 정의된 1~N번째 라인을 스킵한다. (헤더를 스킵하고 싶으면, `numLinesToSkip=1`로 선언한다.)
+- ~~~java
+  @ParameterizedTest
+  @CsvFileSource(resources = "/two-column.csv", numLinesToSkip = 1)
+  void testWithCsvFileSourceFromClasspath(String country, int reference) {
+      assertNotNull(country);
+      assertNotEquals(0, reference);
+  }
+  ~~~    
 
 ## 메소드 이름 표시하기
 ~~~java
