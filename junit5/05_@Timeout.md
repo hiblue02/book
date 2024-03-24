@@ -12,9 +12,9 @@ public class TimeoutExample {
 }
 ~~~
 ## ThreadMode
-- INFERRED(기본값):junit.jupiter.execution.timeout.thread.mode.default 값으로 실행. 없으면 SAME_THREAD로 실행.
-- SAME_THREAD: 테스트 메서드가 현재 스레드에서 실행.
-- SEPARATE_THREAD: 테스트 메서드가 별도의 스레드에서 실행.
+- `INFERRED`(기본값): junit.jupiter.execution.timeout.thread.mode.default 값으로 실행. 없으면 SAME_THREAD로 실행.
+- `SAME_THREAD`: 테스트 메서드가 현재 스레드에서 실행.
+- `SEPARATE_THREAD`: 테스트 메서드가 별도의 스레드에서 실행.
   - 비동기 작업을 테스트하는 경우: 비동기 작업이 테스트 되었는지 확인하기 위해
   - 테스트 간 상호 작용 방지하기 위한 경우
   - ~~~java
