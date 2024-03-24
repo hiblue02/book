@@ -8,8 +8,7 @@ junit.jupiter.execution.parallel.enabled = true
 junit.jupiter.execution.parallel.mode.default = same_thread
 junit.jupiter.execution.parallel.mode.classes.default = concurrent
 ~~~
-<img src="https://github.com/hiblue02/book/assets/38008976/92ae4ead-a73f-4a30-abaa-cda8ce16a234" width="600">
-![Uploading writing-tests_execution_mode.svg…]()
+<img src="https://github.com/hiblue02/book/junit5/image/writing-tests_execution_mode.svg" width="600">
 
 ### 테스트 코드에서 실행 방식 설정하기
 ~~~java
