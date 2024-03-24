@@ -4,7 +4,8 @@
     - 테스트는 람다식으로 구현하는데, DisplayName과 DisplayTest를 쌍으로 넣어줘야 한다. (시나리오 별로 테스트를 묶을 수 있어 테스트 가독성이 올라간다.)
 - 런타임에 생성되므로, 특정 조건에 따라 테스트를 생성하고 실행할 수 있다.
 - @TestFactory 메소드의 리턴값은 `DynamicNode`, `Stream`, `Collection`, `Iterable`, `Iterator`, array of `DynamicNode`여야 한다.
-- @BeforeEach와 @AfterEach와 같은 생명주기 관련 기능은 개별로 실행되지 않는다. (TestFactory 메소드 최초/최종 실행될때 1번만 동작한다.) 
+- @BeforeEach와 @AfterEach와 같은 생명주기 관련 기능은 개별로 실행되지 않는다. (TestFactory 메소드 최초/최종 실행될때 1번만 동작한다.)
+## DynamicTest 예시  
 ~~~java
 @DisplayName("시나리오 테스트")
 @TestFactory
