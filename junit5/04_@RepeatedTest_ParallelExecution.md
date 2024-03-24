@@ -52,6 +52,7 @@ public class ParallelTest1 {
 
 ## 베타적 제어 @ResourceLock
 - 공유자원에 대해 다중 액세스가 발생해도 문제 없이 동작할 수 있도록 Lock을 건다.
+  - `@ResourceLock("value")`  
   - value에는 배타적 제어하기 위한 키가 되는 문자열을 지정한다. 동일한 키 문자열이 설정된 @ResourceLock에 대해서만 동기화가 발생한다. 
 - ~~~java
   public class ExclusiveControlTest {
@@ -61,5 +62,8 @@ public class ParallelTest1 {
     @ResourceLock("lock")
     void test1() throws Exception { ... }
   }
-  ~~~  
+  ~~~
+
+참고  
 https://www.devkuma.com/docs/junit5/parallel/#google_vignette
+https://junit.org/junit5/docs/current/user-guide/#writing-tests-parallel-execution-synchronization
