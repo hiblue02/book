@@ -65,5 +65,5 @@ public class ParallelTest1 {
   ~~~
 
 참고  
-https://www.devkuma.com/docs/junit5/parallel/#google_vignette
-https://junit.org/junit5/docs/current/user-guide/#writing-tests-parallel-execution-synchronization
+- https://www.devkuma.com/docs/junit5/parallel/#google_vignette
+- https://junit.org/junit5/docs/current/user-guide/#writing-tests-parallel-execution-synchronization
