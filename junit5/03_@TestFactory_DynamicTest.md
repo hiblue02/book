@@ -31,3 +31,18 @@ Stream<DynamicTest> dynamicTestsFromCollection() {
 }
 ~~~
 https://tecoble.techcourse.co.kr/post/2020-07-31-dynamic-test/
+
+~~~java
+    @TestFactory
+    Stream<DynamicTest> testFactory() {
+        Iterator<String> strings = List.of("첫번째", "두번째", "세번째", "네번째").iterator();
+
+        return DynamicTest.stream(strings, (input) -> input + " 테스트",
+                (input) -> Assertions.assertThat(input).isNotBlank());
+    }
+~~~
+testFactory()
+ > 첫번째 테스트
+ > 두번째 테스트
+ > 세번째 테스트
+ > 네번째 테스트
