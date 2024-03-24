@@ -1,7 +1,8 @@
 ## @TestFactory
 - 동적으로 테스트 코드를 작성해야 할 때 사용한다.
 - 런타임에 생성되므로, 특정 조건에 따라 테스트를 생성하고 실행할 수 있다.
-- @TestFactory 메소드의 리턴값은 `DynamicNode`, `Stream`, `Collection`, `Iterable`, `Iterator`, array of `DynamicNode`여야 한다. 
+- @TestFactory 메소드의 리턴값은 `DynamicNode`, `Stream`, `Collection`, `Iterable`, `Iterator`, array of `DynamicNode`여야 한다.
+- @BeforeEach와 @AfterEach와 같은 생명주기 관련 기능은 개별로 실행되지 않는다. (TestFactory 메소드 최초/최종 실행될때 1번만 동작한다.) 
 ~~~java
 @DisplayName("시나리오 테스트")
 @TestFactory
@@ -29,3 +30,4 @@ Stream<DynamicTest> dynamicTestsFromCollection() {
     );
 }
 ~~~
+https://tecoble.techcourse.co.kr/post/2020-07-31-dynamic-test/
