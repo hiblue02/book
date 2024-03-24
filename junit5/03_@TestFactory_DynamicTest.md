@@ -41,9 +41,10 @@ https://tecoble.techcourse.co.kr/post/2020-07-31-dynamic-test/
                 (input) -> Assertions.assertThat(input).isNotBlank());
     }
 ~~~
-
+~~~
 testFactory()
 ㄴ 첫번째 테스트
 ㄴ 두번째 테스트
 ㄴ 세번째 테스트
 ㄴ 네번째 테스트
+~~~
