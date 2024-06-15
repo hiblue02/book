@@ -4,7 +4,7 @@
 #### [@TestFactory](/junit5/03_@TestFactory_DynamicTest.md)
 #### [@RepeatedTest](/junit5/04_@RepeatedTest_ParallelExecution.md)
 #### [@TimeOut](/junit5/05_@Timeout.md)
-#### [@Enabled] (/junit5/06_@Enabled_ConditionalTestExecution.md)
+#### [@Enabled](/junit5/06_@Enabled_ConditionalTestExecution.md)
 #### [@TestTemplate](/junit5/07_@TestTemplate.md)
 #### [Assertions and Assumption](/junit5/08_Assertions_and_Assumptions.md)
 #### [Tagging](/junit5/09_Tagging_and_Filtering.md)
