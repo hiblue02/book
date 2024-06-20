@@ -10,5 +10,5 @@
 ##### 2024-06-20 목요일
 - [x] https://www.baeldung.com/kotlin/tail-recursion
 - [x] https://www.baeldung.com/kotlin/equality-operators
-- [ ] https://www.baeldung.com/kotlin/objects
+- [x] https://www.baeldung.com/kotlin/objects
 - [x] https://www.baeldung.com/kotlin/comparing-arrays
