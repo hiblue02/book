@@ -8,6 +8,7 @@
 - [x] https://www.baeldung.com/kotlin/data-classes 
 - [x] https://www.baeldung.com/kotlin/lazy-initialization
 ##### 2024-06-20 목요일
-- [ ] https://www.baeldung.com/kotlin/tail-recursion
-- [ ] https://www.baeldung.com/kotlin/equality-operators
+- [x] https://www.baeldung.com/kotlin/tail-recursion
+- [x] https://www.baeldung.com/kotlin/equality-operators
 - [ ] https://www.baeldung.com/kotlin/objects
+- [x] https://www.baeldung.com/kotlin/comparing-arrays
