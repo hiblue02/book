@@ -13,9 +13,9 @@
 - [x] https://www.baeldung.com/kotlin/objects
 - [x] https://www.baeldung.com/kotlin/comparing-arrays
 ##### 2024-06-22 토요일
-- [ ] https://www.baeldung.com/kotlin/sealed-classes
-- [ ] https://www.baeldung.com/kotlin/delegated-properties
-- [ ] https://www.baeldung.com/kotlin/visibility-modifiers
+- [x] https://www.baeldung.com/kotlin/sealed-classes
+- [x] https://www.baeldung.com/kotlin/delegated-properties
+- [x] https://www.baeldung.com/kotlin/visibility-modifiers
 - [ ] https://www.baeldung.com/kotlin/generics
 - [ ] https://www.baeldung.com/kotlin/infix-functions
 - [ ] https://www.baeldung.com/kotlin/coroutines
