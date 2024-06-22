@@ -12,3 +12,21 @@
 - [x] https://www.baeldung.com/kotlin/equality-operators
 - [x] https://www.baeldung.com/kotlin/objects
 - [x] https://www.baeldung.com/kotlin/comparing-arrays
+##### 2024-06-22 토요일
+- [ ] https://www.baeldung.com/kotlin/sealed-classes
+- [ ] https://www.baeldung.com/kotlin/delegated-properties
+- [ ] https://www.baeldung.com/kotlin/visibility-modifiers
+- [ ] https://www.baeldung.com/kotlin/generics
+- [ ] https://www.baeldung.com/kotlin/infix-functions
+- [ ] https://www.baeldung.com/kotlin/coroutines
+- [ ] https://www.baeldung.com/kotlin/extension-methods
+- [ ] https://www.baeldung.com/kotlin/lambda-expressions
+##### 2024-06-23 일요일
+- [ ] https://www.baeldung.com/kotlin/collections-api
+- [ ] https://www.baeldung.com/kotlin/filter-collection
+- [ ] https://www.baeldung.com/kotlin/list-to-map
+- [ ] https://www.baeldung.com/kotlin/read-file
+- [ ] https://www.baeldung.com/kotlin/write-file
+- [ ] https://www.baeldung.com/kotlin/jpa
+- [ ] https://www.baeldung.com/kotlin/jvm-synthetic
+- [ ] https://www.baeldung.com/kotlin/jvm-field-annotation
