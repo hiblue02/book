@@ -19,8 +19,8 @@
 - [x] https://www.baeldung.com/kotlin/generics
 - [x] https://www.baeldung.com/kotlin/infix-functions
 - [x] https://www.baeldung.com/kotlin/coroutines
-- [ ] https://www.baeldung.com/kotlin/extension-methods
-- [ ] https://www.baeldung.com/kotlin/lambda-expressions
+- [x] https://www.baeldung.com/kotlin/extension-methods
+- [x] https://www.baeldung.com/kotlin/lambda-expressions
 ##### 2024-06-23 일요일
 - [ ] https://www.baeldung.com/kotlin/collections-api
 - [ ] https://www.baeldung.com/kotlin/filter-collection
