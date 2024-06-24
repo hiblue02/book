@@ -22,11 +22,11 @@
 - [x] https://www.baeldung.com/kotlin/extension-methods
 - [x] https://www.baeldung.com/kotlin/lambda-expressions
 ##### 2024-06-23 일요일
-- [ ] https://www.baeldung.com/kotlin/collections-api
-- [ ] https://www.baeldung.com/kotlin/filter-collection
-- [ ] https://www.baeldung.com/kotlin/list-to-map
-- [ ] https://www.baeldung.com/kotlin/read-file
-- [ ] https://www.baeldung.com/kotlin/write-file
-- [ ] https://www.baeldung.com/kotlin/jpa
-- [ ] https://www.baeldung.com/kotlin/jvm-synthetic
-- [ ] https://www.baeldung.com/kotlin/jvm-field-annotation
+- [x] https://www.baeldung.com/kotlin/collections-api
+- [x] https://www.baeldung.com/kotlin/filter-collection
+- [x] https://www.baeldung.com/kotlin/list-to-map
+- [x] https://www.baeldung.com/kotlin/read-file
+- [x] https://www.baeldung.com/kotlin/write-file
+- [x] https://www.baeldung.com/kotlin/jpa
+- [x] https://www.baeldung.com/kotlin/jvm-synthetic
+- [x] https://www.baeldung.com/kotlin/jvm-field-annotation
