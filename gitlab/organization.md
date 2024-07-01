@@ -32,7 +32,7 @@
     - direct member는 바로 삭제할 수 있지만, inherited member는 부모 그룹에서 삭제해야 된다.
     - Manage > Members > Remove Member > (선택사항: 관련된 이슈와 mr에서도 사용자 할당 해제) 
     - 삭제할 멤버가 개인 repository에 project를 fork하지 않았는지 확인해야 한다.
-    - Mantainer/Owner 역할을 가진 악성 사용자는 자신을 다시 프로젝트/그룹에 초대할 수 있다. 이를 막기위해 악성 사용자의 계정을 차단할 수 있다.
+    - Mantainer/Owner 역할을 가진 악성 사용자는 자신을 다시 프로젝트/그룹에 초대할 수 있다. 이를 막기 위해 악성 사용자의 계정을 차단할 수 있다.
 6. Project Access 요청하기
    - 접근하고 싶은 프로젝트를 찾아, 우측 상단의 `...`을 눌러 `request access`를 요청한다. 프로젝트 관리자가 승인하면 접근할 수 있다.
    - 프로젝트 관리자가 승인해주기 전에 요청을 회수할 수 있다. 프로젝트 이름 옆에 `Withdraw Access Request`를 선택한다. 
