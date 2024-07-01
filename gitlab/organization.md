@@ -40,10 +40,6 @@
    - Owner 역할을 가진 사용자는 어떤 사용자의 접근을 차단할 수 있다.
    - Settings > General > Visibility, project features, permissions > Users can request access > Save Change   
   
-### 이용자 그룹 만들기 
-1. Your Work / Groups / NewGroup / Create Group으로 이동한다. 
-
-
 ### 참고문서
 - https://docs.gitlab.com/ee/user/namespace/
 - https://docs.gitlab.com/ee/user/reserved_names.html#limitations-on-usernames-project-and-group-names
