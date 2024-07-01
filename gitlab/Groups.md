@@ -8,3 +8,7 @@
 5. 그룹 레벨로 pipeline이 성공해야 merge할 수 있도록 강제할 수 있다. (Settings > General > Merge Requests > Merge Check / Pipelines must succeed)
 6. mr에서 리뷰 쓰레드가 모두 resolved 되어야 merge될 수 있도록 제한할 수 있다. (https://docs.gitlab.com/ee/user/group/manage.html#prevent-merge-unless-all-threads-are-resolved)
 7. 그룹 내에서 최근 90일 이내, 얼마나 많은 mr, 이슈, member가 생성되었는지 볼 수 있다. (https://docs.gitlab.com/ee/user/group/manage.html#group-activity-analytics)
+8. 그룹 별 push rule을 관리할 수 있다. (https://docs.gitlab.com/ee/user/group/access_and_permissions.html#group-push-rules)
+
+#### Group-Level Project Templates
+[https://velog.io/@yeguu037/Git-GitLab-MR-Template-만들기](https://velog.io/@ss-won/Git-GitLab-Issue-MR-Template-%EB%A7%8C%EB%93%A4%EA%B8%B0)
