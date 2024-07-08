@@ -37,4 +37,7 @@
 - 이슈/MR을 생성/편집할 때 템플릿 선택 드롭다운 디렉토리에 표시된다.
 #### MR 템플릿에서 지원되는 변수 
 - 참고: [MR 템플릿에서 지원되는 변수](https://gitlab-docs.infograb.net/ee/user/project/description_templates.html#merge-request-%ED%85%9C%ED%94%8C%EB%A6%BF%EC%97%90%EC%84%9C-%EC%A7%80%EC%9B%90%EB%90%98%EB%8A%94-%EB%B3%80%EC%88%98)
+#### 기본 템플릿 지정
+- 이슈 기본 템플릿: 왼쪽 사이드바 > 검색 또는 이동 > 설정 > 일반 > 이슈에 대한 기본 설명 템플릿 > 변경 후 저장
+- MR 기본 템플릿: 왼쪽 사이드바 > 검색 또는 이동 > 설정 > Merge Request > Merge Request에 대한 기본 설명 템플릿 > 변경 후 저장  
 
