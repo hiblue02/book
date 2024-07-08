@@ -12,3 +12,4 @@
 
 #### Group-Level Project Templates
 [https://velog.io/@yeguu037/Git-GitLab-MR-Template-만들기](https://velog.io/@ss-won/Git-GitLab-Issue-MR-Template-%EB%A7%8C%EB%93%A4%EA%B8%B0)
+https://gitlab-docs.infograb.net/ee/user/project/description_templates.html
